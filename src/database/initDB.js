@@ -6,7 +6,7 @@ const sequelize = new Sequelize({
     dialect: "postgres",
     database: process.env.DATABASE,
     username: process.env.USERNAMEDB,
-    password: process.env.password
+    password: process.env.PASSWORD
 })
 
 
