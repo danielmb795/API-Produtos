@@ -1,17 +1,15 @@
 import express from 'express';
 import 'dotenv/config';
+import initDB from './src/database/initDB.js'
+import router from './src/routes/routes.js'
 
 const srv = express();
-
 const port = process.env.PORT;
 
-import initDB from './src/database/initDB.js'
+srv.use(express.json());
+srv.use(router)
 
 initDB()
-
-srv.get("/", (req,res) => {
-    res.send("teste")
-})
 
 srv.listen(port, () => {
     console.log(`Server Running in port ${port}`)

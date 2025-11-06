@@ -1,4 +1,3 @@
-import e from "express";
 import Produto from "../database/models/produtos.js";
 
 
